@@ -1,0 +1,6 @@
+{
+  "parent": "holydinglegend:displaysettings/deserteagle.item",
+  "textures": {
+    "layer0": "holydinglegend:item/texturecrc"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "deserteaglecrcfire": {
+    "subtitle": "subtitles.deserteaglecrcfire",
+    "sounds": [
+      {
+        "name": "holydinglegend:fire",
+        "stream": false
+      }
+    ]
+  },
+  "deserteaglecrcreload": {
+    "subtitle": "subtitles.deserteaglecrcreload",
+    "sounds": [
+      {
+        "name": "holydinglegend:reload",
+        "stream": false
+      }
+    ]
+  }
+}
