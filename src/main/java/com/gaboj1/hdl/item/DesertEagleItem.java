@@ -38,9 +38,7 @@ import static com.gaboj1.hdl.init.HDLModItems.DESERT_EAGLE_AMMO;
 
 public class DesertEagleItem extends Item implements GeoItem {
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-    public String animationprocedure = "empty";
 
-    //public static final String RELOADING_DONE_TAG = "isReloading";
     private String textureResource = "textures/item/texturecrc.png";
     public boolean isReloading = false;
     public static ItemDisplayContext transformType;
@@ -61,31 +59,20 @@ public class DesertEagleItem extends Item implements GeoItem {
 
     public DesertEagleItem() {
         super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.EPIC).defaultDurability(MAX_AMMO));//引入弹匣了再把这个删了
-        System.out.println(this.textureResource);
-        SingletonGeoAnimatable.registerSyncedAnimatable(this);
-    }
-
-    public DesertEagleItem(String textureResource) {
-        super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.EPIC).defaultDurability(MAX_AMMO));//引入弹匣了再把这个删了
-        this.textureResource = textureResource;
-        SingletonGeoAnimatable.registerSyncedAnimatable(this);
-    }
-
-    public DesertEagleItem(String textureResource, float fireDamage, int coolDownTick, float power) {
-        super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.EPIC).defaultDurability(MAX_AMMO));//引入弹匣了再把这个删了
-        this.textureResource = textureResource;
-        this.fireDamage = fireDamage;
-        this.coolDownTick = coolDownTick;
-        this.power = power;
         SingletonGeoAnimatable.registerSyncedAnimatable(this);
     }
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+
         consumer.accept(new IClientItemExtensions() {
+            private DesertEagleItemRenderer renderer;
             @Override
             public BlockEntityWithoutLevelRenderer getCustomRenderer() {
-                return new DesertEagleItemRenderer(textureResource);//MCreator写final害我调半天...
+                if(this.renderer == null){
+                    renderer = new DesertEagleItemRenderer();
+                }
+                return this.renderer;//MCreator写final害我调半天...
             }
         });
     }
@@ -144,11 +131,7 @@ public class DesertEagleItem extends Item implements GeoItem {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-//		MouseHandler mouseHandler = Minecraft.getInstance().mouseHandler;
-//		if(!mouseHandler.isRightPressed()){
         DesertEagleRightClickAirProcedure.execute(world, entity, hand);
-        //}
-
         return InteractionResultHolder.pass(entity.getItemInHand(hand));
 
     }
@@ -158,7 +141,7 @@ public class DesertEagleItem extends Item implements GeoItem {
         ItemStack bulletItemStack = getBulletItemStack(itemstack,0);
         int ammo = bulletItemStack.getMaxDamage()-bulletItemStack.getDamageValue();
         list.add(Component.translatable("info.simpledeserteagle.ammo_count").append(ammo+"/"+MAX_AMMO));
-        list.add(Component.translatable("info.simpledeserteagle.ammo_damage").append(String.valueOf(fireDamage*16)));
+        //list.add(Component.translatable("info.simpledeserteagle.ammo_damage").append(String.valueOf(fireDamage*16)));
         list.add(Component.translatable("info.simpledeserteagle.ammo_cooldown").append(String.format("%.2fs", coolDownTick*0.05)));
     }
 
