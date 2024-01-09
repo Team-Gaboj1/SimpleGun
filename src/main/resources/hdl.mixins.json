@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.gaboj1.hdl.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "com.gaboj1.hdl.mixin.ObfuscateMixinPlugin",
+  "client": [
+    "PlayerModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "hdl.mixin-refmap.json",
+  "minVersion": "0.8"
+}
