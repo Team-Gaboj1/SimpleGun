@@ -2,7 +2,7 @@
   "item_group.simpledeserteagle.simple_desert_eagle": "Simple Desert Eagle",
   "item.simpledeserteagle.desert_eagle_bullet": "Desert Eagel Bullet Effect",
   "item.simpledeserteagle.golden_desert_eagle": "Golden Desert Eagle",
-  "item.simpledeserteagle.ak47": "AK47",
+  "item.holydinglegend.awp": "AWP",
   "subtitles.deserteaglereload": "Desert Eagle Reload",
   "item.holydinglegend.desert_eagle_ammo": "Desert Eagle Ammo",
   "item.simpledeserteagle.desert_eagle_blaze": "Desert Eagle Blaze",
@@ -30,5 +30,6 @@
   "tips.simpledeserteagle.off_hand_ammo": "Off Hand Ammo:",
   "tips.simpledeserteagle.main_ammo_full": "Main hand ammo is FULL!",
   "tips.simpledeserteagle.off_ammo_full": "Offhand ammo is FULL!",
-  "tips.simpledeserteagle.reloading": "You are Reloading!"
+  "tips.simpledeserteagle.reloading": "You are Reloading!",
+  "tooltip.holydinglegend.awp.tooltip": "Snipingrifle with great power."
 }

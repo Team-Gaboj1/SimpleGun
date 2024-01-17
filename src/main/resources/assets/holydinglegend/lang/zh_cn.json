@@ -2,7 +2,7 @@
   "item_group.simpledeserteagle.simple_desert_eagle": "简单沙鹰",
   "item.simpledeserteagle.desert_eagle_bullet": "沙鹰子弹效果",
   "item.simpledeserteagle.golden_desert_eagle": "黄金沙鹰",
-  "item.simpledeserteagle.ak47": "AK47",
+  "item.holydinglegend.awp": "AWP",
   "subtitles.deserteaglereload": "沙鹰换弹",
   "item.holydinglegend.desert_eagle_ammo": "沙鹰弹药",
   "item.simpledeserteagle.desert_eagle_blaze": "沙漠之鹰-炽热之焰",
@@ -30,5 +30,6 @@
   "tips.simpledeserteagle.off_hand_ammo": "副手剩余弹药:",
   "tips.simpledeserteagle.main_ammo_full": "主手弹药充足！",
   "tips.simpledeserteagle.off_ammo_full": "副手弹药充足！",
-  "tips.simpledeserteagle.reloading": "您正在换弹！"
+  "tips.simpledeserteagle.reloading": "您正在换弹！",
+  "tooltip.holydinglegend.awp.tooltip": "威力巨大的狙击步枪"
 }

@@ -7,7 +7,7 @@ import net.minecraft.client.model.PlayerModel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.MinecraftForge;
-import net.pinero.simpledeserteagle.event.PlayerModelEvent;
+import com.gaboj1.hdl.event .PlayerModelEvent;
 
 public class Hooks {
     public static void fireRenderPlayer(EntityModel model, PoseStack poseStack, VertexConsumer consumer, int light, int overlay, float red, float green, float blue, float alpha, LivingEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch)

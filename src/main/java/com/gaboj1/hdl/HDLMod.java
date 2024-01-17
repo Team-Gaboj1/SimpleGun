@@ -4,9 +4,11 @@ import com.gaboj1.hdl.init.HDLModEntities;
 import com.gaboj1.hdl.init.HDLModItemTabs;
 import com.gaboj1.hdl.init.HDLModItems;
 import com.gaboj1.hdl.init.HDLModSounds;
+import com.gaboj1.hdl.item.AWPItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -71,7 +73,9 @@ public class HDLMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event){
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(AWPItem.AWP);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
