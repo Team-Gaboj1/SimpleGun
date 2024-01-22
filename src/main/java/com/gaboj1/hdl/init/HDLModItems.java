@@ -15,4 +15,7 @@ public class HDLModItems {
 	public static final RegistryObject<Item> DESERT_EAGLE = REGISTRY.register("desert_eagle", () -> new DesertEagleItem());
 	public static final RegistryObject<Item> DESERT_EAGLE_BULLET = REGISTRY.register("desert_eagle_bullet", () -> new DesertEagleBulletItem());
 	public static final RegistryObject<Item> AWP = REGISTRY.register("awp",() -> new AWPItem());
+	public static final RegistryObject<Item> AWP_AMMO = REGISTRY.register("awp_ammo",() -> new AWPAmmoItem());
+	public static final RegistryObject<Item> AWP_BULLET = REGISTRY.register("awp_bullet",() -> new AWPBulluetItem());
+
 }

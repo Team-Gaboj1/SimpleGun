@@ -7,6 +7,8 @@
   "item.holydinglegend.desert_eagle_ammo": "沙鹰弹药",
   "item.simpledeserteagle.desert_eagle_blaze": "沙漠之鹰-炽热之焰",
   "subtitles.deserteaglecrcreload": "沙鹰换弹",
+  "item.holydinglegend.awp_ammo": "AWP弹匣",
+  "item.holydinglegend.awp_bullet": "马格南子弹",
   "item.simpledeserteagle.diamond_desert_eagle": "钻石沙鹰",
   "subtitles.deserteagelcrcfire": "沙鹰开火",
   "key.simpledeserteagle.reload": "换弹",
@@ -32,4 +34,5 @@
   "tips.simpledeserteagle.off_ammo_full": "副手弹药充足！",
   "tips.simpledeserteagle.reloading": "您正在换弹！",
   "tooltip.holydinglegend.awp.tooltip": "威力巨大的狙击步枪"
+
 }
