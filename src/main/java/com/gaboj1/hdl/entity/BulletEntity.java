@@ -36,12 +36,12 @@ import net.minecraft.network.protocol.Packet;
 import java.util.Optional;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class DesertEagleBulletEntity extends AbstractArrow implements ItemSupplier {
-	public DesertEagleBulletEntity(PlayMessages.SpawnEntity packet, Level world) {
+public class BulletEntity extends AbstractArrow implements ItemSupplier {
+	public BulletEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(HDLModEntities.DESERT_EAGLE_BULLET.get(), world);
 	}
 
-	public DesertEagleBulletEntity(EntityType<? extends DesertEagleBulletEntity> type, Level world) {
+	public BulletEntity(EntityType<? extends BulletEntity> type, Level world) {
 		super(type, world);
 	}
 

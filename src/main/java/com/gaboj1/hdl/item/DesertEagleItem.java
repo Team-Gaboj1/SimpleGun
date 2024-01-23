@@ -2,7 +2,7 @@
 package com.gaboj1.hdl.item;
 
 import com.gaboj1.hdl.KeyMappingsTest;
-import com.gaboj1.hdl.entity.DesertEagleBulletEntity;
+import com.gaboj1.hdl.entity.BulletEntity;
 import com.gaboj1.hdl.init.HDLModEntities;
 import com.gaboj1.hdl.init.HDLModSounds;
 import com.gaboj1.hdl.item.renderer.DesertEagleItemRenderer;
@@ -165,7 +165,7 @@ public class DesertEagleItem extends Item implements GeoItem {
                     if (world instanceof ServerLevel projectileLevel) {
                         Projectile _entityToSpawn =	new Object() {
                             public Projectile getArrow(Level level, Entity shooter, float damage, int knockBack, byte piercing) {
-                                AbstractArrow entityToSpawn = new DesertEagleBulletEntity(HDLModEntities.DESERT_EAGLE_BULLET.get(), level);
+                                AbstractArrow entityToSpawn = new BulletEntity(HDLModEntities.DESERT_EAGLE_BULLET.get(), level);
                                 entityToSpawn.setOwner(shooter);
                                 entityToSpawn.setNoGravity(true);
                                 entityToSpawn.setBaseDamage(damage);
@@ -195,7 +195,7 @@ public class DesertEagleItem extends Item implements GeoItem {
                         //实现抖动
                         double[] recoilTimer = {0}; // 后坐力计时器
                         double totalTime = 100;
-                        int sleepTime = 2;
+                        int sleepTime = 2; //sleeptime后坐力需要修改
                         double recoilDuration = totalTime / sleepTime; // 后坐力持续时间
                         float speed = (float) ((Math.random() * 2) - 1) / 10;
                         Runnable recoilRunnable = () -> {
@@ -241,7 +241,6 @@ public class DesertEagleItem extends Item implements GeoItem {
                 } else if (hand == InteractionHand.MAIN_HAND && player.getOffhandItem().getItem() instanceof DesertEagleItem) {//如果副手有枪就使用副手试试
                     player.getOffhandItem().getItem().use(world, player,InteractionHand.OFF_HAND);
                 } else {//都没有就需要换弹了
-
 //					DesertEagleReloadProcedure.execute(world, player);
                     if (world instanceof ServerLevel _level)
                         _level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
@@ -396,7 +395,6 @@ public class DesertEagleItem extends Item implements GeoItem {
 
         //延迟实现换弹逻辑，等动画和音效放完
         new Thread(() -> {//防止sleep卡死
-
             try {
                 int need = 0;
                 ItemStack bullet = DesertEagleItem.getBulletItemStack(handItemStake,0);

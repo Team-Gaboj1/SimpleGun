@@ -1,0 +1,62 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.awp.reload": {
+			"animation_length": 1.83333,
+			"bones": {
+				"main": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.375": [0, 0, 0],
+						"0.5": [-12.5, 0, 0],
+						"0.9167": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "awp_fire"
+				}
+			}
+		},
+		"animation.awp.zoom": {
+			"animation_length": 0.95833,
+			"bones": {
+				"main": {
+					"rotation": {
+						"0.5417": [17.45392, 1.08089, -22.38206],
+						"0.6667": [-2.38443, 0.75155, -0.01564]
+					},
+					"position": {
+						"0.5417": [-2, 0, 0],
+						"0.7917": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "awp_zoom"
+				}
+			}
+		},
+
+		"animation.awp.fire": {
+			"animation_length": 1.83333,
+			"bones": {
+				"main": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.375": [0, 0, 0],
+						"0.5": [-12.5, 0, 0],
+						"0.9167": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "awp_fire"
+				}
+			}
+		}
+	}
+}
